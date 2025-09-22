@@ -1,14 +1,17 @@
 import { StyleSheet, Text, TextInputProps, TouchableOpacityProps, View } from 'react-native';
 import { Add, Input as InputStyled } from './styles';
 
-type Props = TextInputProps & TouchableOpacityProps & {};
+type Props = TextInputProps &
+     TouchableOpacityProps & {
+          onEndEditing: () => void;
+     };
 
-const Input = ({ ...rest }: Props) => {
+const Input = ({ onEndEditing, ...rest }: Props) => {
      return (
           <View style={styles.container}>
                <InputStyled {...rest} />
 
-               <Add>
+               <Add onPress={onEndEditing}>
                     <Text>+</Text>
                </Add>
           </View>
