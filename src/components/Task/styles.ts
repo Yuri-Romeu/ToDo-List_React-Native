@@ -9,6 +9,7 @@ export const Task = styled.View`
      flex-direction: row;
      align-items: center;
      margin-bottom: 14px;
+     justify-content: space-between;
      gap: 10px;
      background-color: #f0f0f0;
      border-radius: 5px;
